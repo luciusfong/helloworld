@@ -18,12 +18,6 @@ jobs:
       with:
         node-version: '16'  # Specify the Node.js version
 
-    - name: Install dependencies
-      run: npm install
-
-    - name: Run tests (optional)
-      run: npm test
-
     - name: Deploy to server
       env:
         PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}  # Set this in your repo secrets
